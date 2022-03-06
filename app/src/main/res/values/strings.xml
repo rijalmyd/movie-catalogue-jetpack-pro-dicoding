@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">InMovies</string>
+    <string name="movies">Movies</string>
+    <string name="tv_shows">Tv Shows</string>
+    <string name="rating">%s</string>
+    <string name="rating_detail">|\t\t%s</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="title">%1$s (%2$s)</string>
+    <string name="duration">%s minutes</string>
+    <string name="episodes">%s episodes</string>
+    <string name="text_share">"Ayo tonton %s di aplikasi InMovies sekarang juga!"</string>
+    <string name="text_bagikan">Bagikan</string>
+    <string name="text_synopsis">Synopsis</string>
+    <string name="text_info_film">Info film</string>
+    <string name="text_status">Status</string>
+    <string name="text_bahasa">Bahasa</string>
+    <string name="text_tanggal_rilis">Tanggal Rilis</string>
+    <string name="text_title_z_a">Title Z-A</string>
+    <string name="text_title_a_z">Title A-Z</string>
+    <string name="text_rating">Rating</string>
+    <string name="text_default">Default</string>
+    <string name="text_dashboard">Dashboard</string>
+    <string name="text_favorite">Favorite</string>
+    <string name="text_about">About</string>
+    <string name="text_add_favorite">Tambah ke Favorite</string>
+    <string name="text_about_heading">Find your movies\nHere…</string>
+    <string name="text_about_content">The Movie Database (TMDB) is a community built movie and TV database. Every piece of data has been added by our amazing community dating back to 2008. TMDb\'s strong international focus and breadth of data is largely unmatched and something we\'re incredibly proud of. Put simply, we live and breathe community and that\'s precisely what makes us different.</string>
+</resources>

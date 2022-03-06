@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/dashboardFragment"
+        android:title="@string/text_dashboard"
+        android:enabled="true"
+        android:icon="@drawable/ic_dashboard"/>
+
+    <item android:id="@+id/favoriteFragment"
+        android:title="@string/text_favorite"
+        android:enabled="true"
+        android:icon="@drawable/ic_favorited"/>
+
+    <item android:id="@+id/aboutFragment"
+        android:title="@string/text_about"
+        android:enabled="true"
+        android:icon="@drawable/ic_about"/>
+</menu>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/InMovies/app/src/main/res/drawable-v24/ic_broken_image_black.xml" value="0.1" />
+        <entry key="..\:/InMovies/app/src/main/res/drawable-v24/ic_error.xml" value="0.1" />
+        <entry key="..\:/InMovies/app/src/main/res/drawable-v24/ic_loading.xml" value="0.1" />
+        <entry key="..\:/InMovies/app/src/main/res/drawable/bg_button.xml" value="0.134" />
+        <entry key="..\:/InMovies/app/src/main/res/drawable/ic_about.xml" value="0.127" />
+        <entry key="..\:/InMovies/app/src/main/res/drawable/ic_broken_image_black.xml" value="0.1" />
+        <entry key="..\:/InMovies/app/src/main/res/drawable/ic_duration.xml" value="0.1" />
+        <entry key="..\:/InMovies/app/src/main/res/drawable/ic_error.xml" value="0.1" />
+        <entry key="..\:/InMovies/app/src/main/res/drawable/ic_favorite.xml" value="0.127" />
+        <entry key="..\:/InMovies/app/src/main/res/drawable/ic_favorite_selector.xml" value="0.127" />
+        <entry key="..\:/InMovies/app/src/main/res/drawable/ic_favorited.xml" value="0.127" />
+        <entry key="..\:/InMovies/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/InMovies/app/src/main/res/drawable/ic_loading.xml" value="0.1" />
+        <entry key="..\:/InMovies/app/src/main/res/drawable/ic_menu.xml" value="0.1" />
+        <entry key="..\:/InMovies/app/src/main/res/drawable/ic_refresh_black.xml" value="0.1" />
+        <entry key="..\:/InMovies/app/src/main/res/drawable/ic_score.xml" value="0.1" />
+        <entry key="..\:/InMovies/app/src/main/res/drawable/ic_share.xml" value="0.1" />
+        <entry key="..\:/InMovies/app/src/main/res/layout-v23/items_movie.xml" value="0.1" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/activity_detail.xml" value="0.22" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/activity_home.xml" value="0.2" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/activity_main.xml" value="0.16417272338606242" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/activity_splash.xml" value="0.2" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/bottom_sheet_dialog.xml" value="0.25" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/content_detail.xml" value="0.22" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/fragment_about.xml" value="0.25" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/fragment_dashboard.xml" value="0.16417272338606242" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/fragment_favorite.xml" value="0.16417272338606242" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/fragment_favorite_movie.xml" value="0.16417272338606242" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/fragment_favorite_tv_show.xml" value="0.16417272338606242" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/fragment_movie.xml" value="0.2972665148063781" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/fragment_tv.xml" value="0.2" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/fragment_tv_show.xml" value="0.30013831258644535" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/item_movie.xml" value="0.16417272338606242" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/items_movie.xml" value="0.43700787401574803" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/items_tv.xml" value="0.2" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/items_tv_show.xml" value="0.67" />
+        <entry key="..\:/InMovies/app/src/main/res/menu/bottom_nav_menu.xml" value="0.16417272338606242" />
+        <entry key="..\:/InMovies/app/src/main/res/menu/detail_menu.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
