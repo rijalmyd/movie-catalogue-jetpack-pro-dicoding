@@ -27,18 +27,21 @@
         <entry key="..\:/InMovies/app/src/main/res/layout/activity_splash.xml" value="0.2" />
         <entry key="..\:/InMovies/app/src/main/res/layout/bottom_sheet_dialog.xml" value="0.25" />
         <entry key="..\:/InMovies/app/src/main/res/layout/content_detail.xml" value="0.22" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/content_shimmer_recyclerview.xml" value="0.16417272338606242" />
         <entry key="..\:/InMovies/app/src/main/res/layout/fragment_about.xml" value="0.25" />
         <entry key="..\:/InMovies/app/src/main/res/layout/fragment_dashboard.xml" value="0.16417272338606242" />
         <entry key="..\:/InMovies/app/src/main/res/layout/fragment_favorite.xml" value="0.16417272338606242" />
         <entry key="..\:/InMovies/app/src/main/res/layout/fragment_favorite_movie.xml" value="0.16417272338606242" />
         <entry key="..\:/InMovies/app/src/main/res/layout/fragment_favorite_tv_show.xml" value="0.16417272338606242" />
-        <entry key="..\:/InMovies/app/src/main/res/layout/fragment_movie.xml" value="0.2972665148063781" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/fragment_movie.xml" value="0.1683453237410072" />
         <entry key="..\:/InMovies/app/src/main/res/layout/fragment_tv.xml" value="0.2" />
         <entry key="..\:/InMovies/app/src/main/res/layout/fragment_tv_show.xml" value="0.30013831258644535" />
         <entry key="..\:/InMovies/app/src/main/res/layout/item_movie.xml" value="0.16417272338606242" />
         <entry key="..\:/InMovies/app/src/main/res/layout/items_movie.xml" value="0.43700787401574803" />
         <entry key="..\:/InMovies/app/src/main/res/layout/items_tv.xml" value="0.2" />
-        <entry key="..\:/InMovies/app/src/main/res/layout/items_tv_show.xml" value="0.67" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/items_tv_show.xml" value="0.25697503671071953" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/shimmer_detail_activity.xml" value="0.33" />
+        <entry key="..\:/InMovies/app/src/main/res/layout/shimmer_recyclerview.xml" value="0.2" />
         <entry key="..\:/InMovies/app/src/main/res/menu/bottom_nav_menu.xml" value="0.16417272338606242" />
         <entry key="..\:/InMovies/app/src/main/res/menu/detail_menu.xml" value="0.25" />
       </map>

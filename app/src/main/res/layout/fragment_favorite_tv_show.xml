@@ -17,14 +17,37 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:listitem="@layout/items_tv_show"/>
 
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_recyclerview"/>
+
+            <include layout="@layout/shimmer_recyclerview"/>
+
+            <include layout="@layout/shimmer_recyclerview"/>
+
+            <include layout="@layout/shimmer_recyclerview"/>
+
+            <include layout="@layout/shimmer_recyclerview"/>
+
+            <include layout="@layout/shimmer_recyclerview"/>
+
+            <include layout="@layout/shimmer_recyclerview"/>
+
+            <include layout="@layout/shimmer_recyclerview"/>
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
 
     <ImageView
         android:id="@+id/iv_no_tv_show"

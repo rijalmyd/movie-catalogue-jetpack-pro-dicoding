@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -20,6 +19,9 @@ import com.rijaldev.inmovies.R
 import com.rijaldev.inmovies.data.source.local.entity.DetailEntity
 import com.rijaldev.inmovies.databinding.ActivityDetailBinding
 import com.rijaldev.inmovies.databinding.ContentDetailBinding
+import com.rijaldev.inmovies.utils.ViewVisibilityUtils.setViewGone
+import com.rijaldev.inmovies.utils.ViewVisibilityUtils.setViewInvisible
+import com.rijaldev.inmovies.utils.ViewVisibilityUtils.setViewVisible
 import com.rijaldev.inmovies.vo.Resource
 import com.rijaldev.inmovies.vo.Status
 import dagger.hilt.android.AndroidEntryPoint
@@ -55,7 +57,7 @@ class DetailActivity : AppCompatActivity() {
                     val movieId = extras.getString(EXTRA_ID)
                     if (movieId != null) {
                         viewModel.setMovieId(movieId)
-                        activityDetailBinding.contentDetail.root.visibility = View.INVISIBLE
+                        setViewInvisible(contentDetailBinding.root)
                         viewModel.movieDetail.observe(this, movieObserver(TYPE_MOVIE))
                     }
                 }
@@ -64,7 +66,7 @@ class DetailActivity : AppCompatActivity() {
                     val tvShowId = extras.getString(EXTRA_ID)
                     if (tvShowId != null) {
                         viewModel.setTvShowId(tvShowId)
-                        activityDetailBinding.contentDetail.root.visibility = View.INVISIBLE
+                        setViewInvisible(contentDetailBinding.root)
                         viewModel.tvShowDetail.observe(this, movieObserver(TYPE_TVSHOW))
                     }
                 }
@@ -77,14 +79,14 @@ class DetailActivity : AppCompatActivity() {
             when (listDetail.status) {
                 Status.LOADING -> {
                     activityDetailBinding.apply {
-                        progressBar.visibility = View.VISIBLE
-                        ivNotFound.visibility = View.GONE
+                        setViewVisible(shimmer)
+                        setViewGone(ivNotFound)
                     }
                 }
                 Status.SUCCESS -> {
                     activityDetailBinding.apply {
-                        contentDetail.root.visibility = View.VISIBLE
-                        progressBar.visibility = View.GONE
+                        setViewVisible(contentDetail.root)
+                        setViewGone(shimmer)
                     }
                     populateDetail(listDetail.data as DetailEntity, type)
                     val state = listDetail.data.isFavorite
@@ -92,9 +94,8 @@ class DetailActivity : AppCompatActivity() {
                 }
                 Status.ERROR -> {
                     activityDetailBinding.apply {
-                        progressBar.visibility = View.GONE
-                        contentDetail.root.visibility = View.GONE
-                        ivNotFound.visibility =View.VISIBLE
+                        setViewGone(contentDetail.root, shimmer)
+                        setViewVisible(ivNotFound)
                     }
                     Toast.makeText(this, "Terjadi Kesalahan!", Toast.LENGTH_SHORT).show()
                 }
@@ -125,7 +126,7 @@ class DetailActivity : AppCompatActivity() {
                 tvDateRelease.text = newDate
             } else {
                 tvDuration.text = resources.getString(R.string.episodes, detailEntity.episodes.toString())
-                dateContainer.visibility = View.GONE
+                setViewGone(dateContainer)
             }
 
             val tagline = detailEntity.tagline
@@ -213,8 +214,11 @@ class DetailActivity : AppCompatActivity() {
         if (menu == null) return
         val menuItem = menu?.findItem(R.id.btn_add_favorite)
         menuItem?.apply {
-            icon = if (state) ContextCompat.getDrawable(this@DetailActivity, R.drawable.ic_favorited)
-            else ContextCompat.getDrawable(this@DetailActivity, R.drawable.ic_favorite)
+            icon = if (state) {
+                ContextCompat.getDrawable(this@DetailActivity, R.drawable.ic_favorited)
+            } else {
+                ContextCompat.getDrawable(this@DetailActivity, R.drawable.ic_favorite)
+            }
         }
     }
 

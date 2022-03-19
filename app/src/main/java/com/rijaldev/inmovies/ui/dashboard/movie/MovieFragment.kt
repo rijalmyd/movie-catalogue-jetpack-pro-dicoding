@@ -17,6 +17,8 @@ import com.rijaldev.inmovies.data.source.local.entity.MovieEntity
 import com.rijaldev.inmovies.databinding.BottomSheetDialogBinding
 import com.rijaldev.inmovies.databinding.FragmentMovieBinding
 import com.rijaldev.inmovies.utils.SortUtils
+import com.rijaldev.inmovies.utils.ViewVisibilityUtils.setViewGone
+import com.rijaldev.inmovies.utils.ViewVisibilityUtils.setViewVisible
 import com.rijaldev.inmovies.vo.Resource
 import com.rijaldev.inmovies.vo.Status
 import dagger.hilt.android.AndroidEntryPoint
@@ -58,22 +60,20 @@ class MovieFragment : Fragment(), MovieFragmentCallback {
             when (listMovies.status) {
                 Status.LOADING -> {
                     binding?.apply {
-                        progressBar.visibility = View.VISIBLE
-                        ivNotFound.visibility = View.GONE
+                        setViewVisible(contentShimmer.root)
+                        setViewGone(ivNotFound)
                     }
                 }
                 Status.SUCCESS -> {
                     movieAdapter.submitList(listMovies.data)
                     binding?.apply {
-                        progressBar.visibility = View.GONE
-                        ivNotFound.visibility = View.GONE
+                        setViewGone(contentShimmer.root, scrollContainer, ivNotFound)
                     }
                 }
                 Status.ERROR -> {
                     binding?.apply {
-                        progressBar.visibility = View.GONE
-                        ivNotFound.visibility = View.VISIBLE
-                        sortContainer.visibility = View.GONE
+                        setViewGone(contentShimmer.root, scrollContainer, sortContainer)
+                        setViewVisible(ivNotFound)
                     }
                     Toast.makeText(requireActivity(), "Terjadi Kesalahan!", Toast.LENGTH_SHORT)
                         .show()

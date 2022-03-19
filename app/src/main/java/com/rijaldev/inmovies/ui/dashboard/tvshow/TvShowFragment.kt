@@ -17,6 +17,8 @@ import com.rijaldev.inmovies.data.source.local.entity.TvShowEntity
 import com.rijaldev.inmovies.databinding.BottomSheetDialogBinding
 import com.rijaldev.inmovies.databinding.FragmentTvShowBinding
 import com.rijaldev.inmovies.utils.SortUtils
+import com.rijaldev.inmovies.utils.ViewVisibilityUtils.setViewGone
+import com.rijaldev.inmovies.utils.ViewVisibilityUtils.setViewVisible
 import com.rijaldev.inmovies.vo.Resource
 import com.rijaldev.inmovies.vo.Status
 import dagger.hilt.android.AndroidEntryPoint
@@ -59,22 +61,20 @@ class TvShowFragment : Fragment(), TvShowFragmentCallback {
             when (listTvShows.status) {
                 Status.LOADING -> {
                     binding?.apply {
-                        progressBar.visibility = View.VISIBLE
-                        ivNotFound.visibility = View.GONE
+                        setViewVisible(contentShimmer.root)
+                        setViewGone(ivNotFound)
                     }
                 }
                 Status.SUCCESS -> {
                     tvShowAdapter.submitList(listTvShows.data)
                     binding?.apply {
-                        progressBar.visibility = View.GONE
-                        ivNotFound.visibility = View.GONE
+                        setViewGone(contentShimmer.root, scrollContainer, ivNotFound)
                     }
                 }
                 Status.ERROR -> {
                     binding?.apply {
-                        progressBar.visibility = View.GONE
-                        ivNotFound.visibility = View.VISIBLE
-                        sortContainer.visibility = View.GONE
+                        setViewGone(contentShimmer.root, scrollContainer, sortContainer)
+                        setViewVisible(ivNotFound)
                     }
                     Toast.makeText(requireActivity(), "Terjadi Kesalahan!", Toast.LENGTH_SHORT).show()
                 }

@@ -36,7 +36,7 @@ class FavoriteTvShowFragment : Fragment(), FavoriteCallback {
         val tvShowAdapter = FavoriteTvShowAdapter(this)
 
         viewModel.getFavoriteTvShows().observe(viewLifecycleOwner) { tvShows ->
-            binding?.progressBar?.visibility = View.GONE
+            binding?.shimmer?.visibility = View.GONE
             tvShowAdapter.submitList(tvShows)
 
             binding?.ivNoTvShow?.apply {

@@ -11,9 +11,10 @@
     android:paddingTop="12dp"
     android:orientation="vertical"
     android:clickable="true"
-    android:foreground="?android:attr/selectableItemBackground"
+    android:background="?android:attr/selectableItemBackground"
     app:cardUseCompatPadding="true"
-    android:focusable="true">
+    android:focusable="true"
+    tools:ignore="UnusedAttribute">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/item_container"

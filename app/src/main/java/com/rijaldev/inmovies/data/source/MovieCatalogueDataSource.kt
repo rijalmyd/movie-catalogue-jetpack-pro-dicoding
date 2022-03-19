@@ -7,7 +7,7 @@ import com.rijaldev.inmovies.data.source.local.entity.MovieEntity
 import com.rijaldev.inmovies.data.source.local.entity.TvShowEntity
 import com.rijaldev.inmovies.vo.Resource
 
-interface MovieCatalogueDataSource {
+interface  MovieCatalogueDataSource {
 
     fun getMovies(sort: String): LiveData<Resource<PagedList<MovieEntity>>>
 

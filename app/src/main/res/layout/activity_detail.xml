@@ -16,7 +16,8 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.InMovies.PopupOverlay" />
+            app:popupTheme="@style/Theme.InMovies.PopupOverlay"
+            app:layout_scrollFlags="scroll|enterAlways"/>
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
@@ -31,7 +32,26 @@
             android:orientation="vertical">
 
             <include android:id="@+id/content_detail"
+                android:visibility="gone"
                 layout="@layout/content_detail" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/shimmer_detail_activity"/>
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
 
             <ImageView
                 android:id="@+id/iv_not_found"
@@ -47,11 +67,4 @@
                 tools:ignore="ContentDescription"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
-
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="visible"
-        android:layout_gravity="center"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

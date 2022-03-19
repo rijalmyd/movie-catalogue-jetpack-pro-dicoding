@@ -36,7 +36,7 @@ class FavoriteMovieFragment : Fragment(), FavoriteCallback {
         val favoriteMovieAdapter = FavoriteMovieAdapter(this)
 
         viewModel.getFavoriteMovies().observe(viewLifecycleOwner) { listMovie ->
-            binding?.progressBar?.visibility = View.GONE
+            binding?.shimmer?.visibility = View.GONE
             favoriteMovieAdapter.submitList(listMovie)
 
             binding?.ivNoMovie?.apply {
